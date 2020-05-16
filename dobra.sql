@@ -1,38 +1,37 @@
-use lab2
-SELECT DISTINCT Aktorzy.Imię, Aktorzy.Nazwisko
-FROM (Aktorzy
-INNER JOIN Role ON Aktorzy.ID = Role.aktor_ID);
+use lab2;
+
+SELECT DISTINCT aktorzy.imie, aktorzy.nazwisko
+FROM (aktorzy
+INNER JOIN role ON aktorzy.id = role.aktor_id);
 
 
------------------------------------------------------------
 
-SELECT DISTINCT Filmy.Tytul
-FROM (( Role
-INNER JOIN Filmy ON Role.Film_ID = Filmy.ID)
-INNER JOIN Aktorzy ON Role.Aktor_ID = Aktorzy.ID);
+SELECT DISTINCT filmy.tytul
+FROM (( role
+INNER JOIN filmy ON role.film_id = filmy.id)
+INNER JOIN aktorzy ON role.aktor_id = aktorzy.id);
 
 
------------------------------------------------------------
 
-SELECT DISTINCT Filmy.Tytul
-FROM (Ciekawostki
-INNER JOIN Filmy ON Ciekawostki.Film_ID = Filmy_ID)
-WHERE;
+SELECT DISTINCT filmy.tytul
+FROM (ciekawostki
+INNER JOIN filmy ON ciekawostki.film_id = filmy.id)
+WHERE 1=1;
 
------------------------------------------------------------
 
-SELECT DISTINCT Role.Pseudonim
-FROM ((Role
-INNER JOIN Cytaty ON Role.ID = Cytaty.Rola_ID)
-INNER JOIN Filmy ON Role.Filmy_ID = Filmy_ID)
-WHERE Filmy.rok <2000;
 
------------------------------------------------------------
+SELECT DISTINCT role.pseudonim
+FROM ((role
+INNER JOIN cytaty ON role.id = cytaty.rola_id)
+INNER JOIN filmy ON role.film_id = filmy.id)
+WHERE filmy.rok <2000;
 
-SELECT DISTINCT Aktorzy.Imie, Aktorzy.Naziwsko
-FROM ((Role
-INNER JOIN Cytaty ON Role.ID = Cytaty.Rola_ID)
-INNER JOIN Aktorzy ON Role.Aktor_ID = Aktorzy.ID)
-WHERE Aktorzy.Narodowość = "Polish";
 
-------------------------------------------------------------
+
+SELECT DISTINCT aktorzy.Imie, aktorzy.Naziwsko
+FROM ((role
+INNER JOIN cytaty ON role.id = cytaty.rola_id)
+INNER JOIN aktorzy ON role.aktor_id = aktorzy.id)
+WHERE aktorzy.narodowosc = "polska";
+
+

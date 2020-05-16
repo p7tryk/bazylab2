@@ -11,6 +11,7 @@ function clean()
     echo -e "${RED}baza wypelniona${NC}\n"
     sleep 1
 }
+mysql --version
 clean
 
 echo -e "${RED}zadanie na dobrą${NC}\n"

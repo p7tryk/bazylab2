@@ -32,7 +32,9 @@ create table role
 	imie varchar(50) null,
 	nazwisko varchar(50) null,
 	pseudonim varchar(50) null,
-	primary key(film_id,aktor_id)
+	primary key(film_id,aktor_id),
+	foreign key (film_id) references filmy(id),
+	foreign key (aktor_id) references aktorzy(id)
 );
 drop table if exists cytaty;
 create table cytaty (
@@ -47,5 +49,6 @@ create table ciekawostki (
        id int not null auto_increment,
        film_id int not null,
        tresc varchar(100) not null,
-       primary key(id)
+       primary key(id),
+       foreign key (film_id) references filmy(id)
 );

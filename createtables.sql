@@ -1,3 +1,8 @@
+/*
+thisconnect@notarch:~$ mysql --version
+mysql  Ver 8.0.20-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))
+*/
+
 drop database if exists lab2;
 create database lab2 CHARACTER SET utf8 COLLATE utf8_general_ci;
 use lab2
@@ -32,7 +37,7 @@ create table role
 	imie varchar(50) null,
 	nazwisko varchar(50) null,
 	pseudonim varchar(50) null,
-	primary key(film_id,aktor_id),
+	constraint id primary key(film_id,aktor_id),
 	foreign key (film_id) references filmy(id),
 	foreign key (aktor_id) references aktorzy(id)
 );
@@ -42,6 +47,7 @@ create table cytaty (
        rola_id int not null,
        tresc varchar(100) not null,
        primary key(id)
+--       constraint fk foreign key (rola_id) references role(film_id,aktor_id)
 );
 
 drop table if exists ciekawostki;

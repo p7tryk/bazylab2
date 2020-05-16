@@ -22,20 +22,19 @@ WHERE 1=1;
 
 select 'wyświetl role, do których przypisano cytaty, wyniki ogranicz do filmów wydanych przed rokiem 2000:' as '';
 
---https://dev.mysql.com/doc/refman/8.0/en/create-table-foreign-keys.html
-/*
-SELECT DISTINCT role.pseudonim
+
+SELECT DISTINCT filmy.tytul, role.pseudonim
 FROM ((role
 INNER JOIN cytaty ON role.id = cytaty.rola_id)
 INNER JOIN filmy ON role.film_id = filmy.id)
 WHERE filmy.rok <2000;
-*/
+
 select 'wyświetl aktorów, którzy wypowiedzieli słynne (zapisane w bazie danych) cytaty, wyniki ogranicz do aktorów o narodowości polskiej' as '';
-/*
+
 SELECT DISTINCT aktorzy.imie, aktorzy.nazwisko
 FROM ((role
 INNER JOIN cytaty ON role.id = cytaty.rola_id)
 INNER JOIN aktorzy ON role.aktor_id = aktorzy.id)
 WHERE aktorzy.narodowosc = "polska";
-*/
+
 

@@ -21,6 +21,8 @@ INNER JOIN filmy ON ciekawostki.film_id = filmy.id)
 WHERE 1=1;
 
 select 'wyświetl role, do których przypisano cytaty, wyniki ogranicz do filmów wydanych przed rokiem 2000:' as '';
+
+--https://dev.mysql.com/doc/refman/8.0/en/create-table-foreign-keys.html
 /*
 SELECT DISTINCT role.pseudonim
 FROM ((role

@@ -44,10 +44,10 @@ create table role
 drop table if exists cytaty;
 create table cytaty (
        id int not null auto_increment,
-       rola_id int not null,
+       aktor_id int not null,
        tresc varchar(100) not null,
-       primary key(id)
---       constraint fk foreign key (rola_id) references role(film_id,aktor_id)
+       primary key(id),
+       foreign key (aktor_id) references aktorzy(id)
 );
 
 drop table if exists ciekawostki;

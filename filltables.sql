@@ -11,7 +11,7 @@ insert into aktorzy (imie,nazwisko,data_ur,narodowosc,wzrost,biografia) values (
 insert into role (film_id,aktor_id,imie,nazwisko,pseudonim) values (2,1,"imie","nazwisko","terminator");
 insert into role (film_id,aktor_id,imie,nazwisko,pseudonim) values (3,2,"Maksymilian","Paradys","Maks");
 
-insert into cytaty (rola_id,tresc) values (1,"I ll be back");
-insert into cytaty (rola_id,tresc) values (2,"Kobieta mnie bije");
+insert into cytaty (aktor_id,tresc) values (1,"I ll be back");
+insert into cytaty (aktor_id,tresc) values (2,"Kobieta mnie bije");
 
 insert into ciekawostki (film_id,tresc) values (2,"ciekawostka");

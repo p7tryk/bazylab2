@@ -58,3 +58,5 @@ resources/
 #gdb history
 .gdb
 .gdb*
+#html exports
+*.sql.html

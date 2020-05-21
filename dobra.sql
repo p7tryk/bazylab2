@@ -8,7 +8,7 @@ INNER JOIN role ON aktorzy.id = role.aktor_id);
 
 select 'wyświetl filmy, w których wystąpił co najmniej 1 polski aktor:' as '';
 
-SELECT DISTINCT filmy.tytul, aktorzy.imie, aktorzy.nazwisko
+SELECT DISTINCT filmy.tytul
 FROM (( role
 INNER JOIN filmy ON role.film_id = filmy.id)
 INNER JOIN aktorzy ON role.aktor_id = aktorzy.id)

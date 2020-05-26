@@ -54,7 +54,7 @@ drop table if exists ciekawostki;
 create table ciekawostki (
        id int not null auto_increment,
        film_id int not null,
-       tresc varchar(255) not null,
+       tresc varchar(512) not null,
        primary key(id),
        foreign key (film_id) references filmy(id)
 );
